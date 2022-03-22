@@ -1,5 +1,6 @@
 div.reputation-container {
     width: 100%;
+    clear: both;
 }
 
 div.reputation-track-header {
@@ -164,3 +165,23 @@ input.prestige[value="1"] + div.checkbox:before {
     font-weight: bold;
     color: #005629;
 }
+
+/* Fieldset builtin */
+div.reputation-container div.repcontrol {
+    height: 28px;
+}
+div.reputation-container div.repcontrol button.btn {
+    box-sizing: border-box;
+    border: 1px solid #99925D;
+    background: none;
+    background-color: #FCFAF5;
+    margin: 0px;
+    outline: inherit;
+    -moz-border-radius: 5px; 
+    border-radius: 5px;
+    padding: 1px 6px;
+}
+div.reputation-container div.repcontrol button.btn:hover {
+    background-color: rgb(200, 200, 170);
+}
+
