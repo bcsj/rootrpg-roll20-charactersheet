@@ -1,0 +1,31 @@
+h1.class-name {
+    font-color: #3D4D47;
+    font-size: 3em;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    text-shadow: 1px 1px 0 #FFF,
+        -1px 1px 0 #FFF,
+        1px -1px 0 #FFF,
+        -1px -1px 0 #FFF,
+        0px 1px 0 #FFF,
+        0px -1px 0 #FFF,
+        -1px 0px 0 #FFF,
+        1px 0px 0 #FFF,
+        1px 1px 0 #FFF,
+        -1px 1px 0 #FFF,
+        1px -1px 0 #FFF,
+        -1px -1px 0 #FFF,
+        0px 1px 0 #FFF,
+        0px -1px 0 #FFF,
+        -1px 0px 0 #FFF,
+        1px 0px 0 #FFF,
+        1px 1px 0 #FFF,
+        -1px 1px 0 #FFF,
+        1px -1px 0 #FFF,
+        -1px -1px 0 #FFF,
+        1px 1px 0 #FFF,
+        -1px 1px 0 #FFF,
+        1px -1px 0 #FFF,
+        -1px -1px 0 #FFF,
+        3px 4px #BCB48C;
+}

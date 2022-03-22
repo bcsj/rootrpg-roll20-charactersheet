@@ -1,0 +1,62 @@
+div.harm-container {
+    width: 100%;
+    margin-bottom: 10px;
+}
+div.harm-items-wrapper {
+    border: 2px dashed #99925D;
+    background-color: #FCFAF5;
+}
+div.harm-item {
+    position: relative;
+    padding: 0px;
+    margin-bottom: 2px;
+}
+div.harm-items-wrapper div.harm-item:first-child {
+    margin-top: 7px;
+}
+div.harm-track-container {
+    display: inline-block;
+    padding: 0px;
+    margin: 0px;
+}
+div.harm-track {
+    display: flex;
+    margin: 0px 10px;
+    padding: 0px;
+    gap: 5px;
+}
+div.harm-track input.squarebox {
+    order: 1;
+    border: 2px solid black;
+    background: black;
+    height: 1.5rem;
+    width: 1.5rem;
+    -webkit-appearance: none;
+    cursor: pointer;
+    z-index: 1;
+}
+div.harm-track input.squarebox:checked {
+    opacity: 0;
+    z-index: 0;
+    position: absolute;
+}
+
+div.harm-track input.squarebox:checked ~ .squarebox {
+    order: 3;
+    background-color: white;
+}
+
+div.harm-track input.squarebox.reset {
+    order: 2;
+    background-color: black;
+}
+div.harm-item span.harm {
+    font-family: 'Gabriela';
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+    top: -2px;
+}
+input.harm[value="0"] + input.squarebox {
+    display: none;
+}

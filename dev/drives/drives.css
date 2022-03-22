@@ -1,0 +1,25 @@
+div.drives-container {
+    position: relative;
+    width: 100%;
+}
+div.drives-container button.add-drive {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+div.drive-item {
+    border: 2px dashed #99925D;
+    background-color: #FCFAF5;
+    padding: 5px;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+}
+div.drive-item span.drive-title {
+    font-family: 'Gabriela';
+    font-weight: bold;
+    display: block;
+}
+div.drive-item span.drive-rule {
+    font-size: .9em;
+    margin: 0px;
+}

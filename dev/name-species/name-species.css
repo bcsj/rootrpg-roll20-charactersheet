@@ -1,0 +1,28 @@
+h2.inline, h3.inline {
+    display: inline;
+    margin-right: 10px;
+}
+
+div.name-species-container {
+    border: 2px dashed #99925D;
+    background-color: #FCFAF5;
+    padding: 5px 15px;
+    margin: 5px auto;
+    display:flex;
+    justify-content:space-between;
+}
+div.name-species-container input[type="text"] {
+    width: 150px;
+    padding: 0 5px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* TODO: remove this???? */
+div.species-other {
+    display: none;
+}
+
+input.species-is-other[value="1"] ~ div.species-other {
+    display: block;
+}

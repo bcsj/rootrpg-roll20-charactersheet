@@ -1,0 +1,166 @@
+div.reputation-container {
+    width: 100%;
+}
+
+div.reputation-track-header {
+    text-align: center;
+    font-variant-caps: small-caps;
+}
+div.reputation-track-header h3:before, div.reputation-track-header h3:after {
+    content: " \2219\2009\2219\2009\2219\2009\2219\2009\2219\2009\2219\2009\2219\2009\2219\2009\2219\2009\2219\2009\2219\2009\2219\2009\2219\2009\2219\2009\2219\2009\2219\2009\2219\2009\2219\2009\2219\2009\2219\2009\2219\2009\2219\2009\2219\2009\2219\2009\2219\2009\2219\2009\2219\2009\2219\2009\2219\2009\2219\2009\2219\2009\2219\2009\2219\2009\2219\2009\2219 ";
+}
+div.reputation-track-footer {
+    position: relative;
+}
+div.reputation-track-footer div.footer-notoriety {
+    position: absolute;
+    left: 150px;
+    top: -35px;
+    width: 200px;
+    font-variant-caps: small-caps;
+    text-align: center;
+    border-top: 2px dashed #6C0D0E;
+}
+div.reputation-track-footer div.footer-notoriety h3 {
+    color: #6C0D0E;
+}
+div.reputation-track-footer div.footer-prestige {
+    position: absolute;
+    left: 375px;
+    top: -35px;
+    width: 285px;
+    font-variant-caps: small-caps;
+    text-align: center;
+    border-top: 2px dashed #005629;
+}
+div.reputation-track-footer div.footer-prestige h3 {
+    color:#005629;
+}
+
+div.reputation-track {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+div.reputation-track input[type="text"] {
+    width: 100px;
+    box-sizing: border-box;
+    padding: 0 5px; 
+    margin: 0 5px 0 0;
+    font-family: 'Indie Flower';
+}
+
+div.reputation-track button {
+    border: 1px solid black;
+    -moz-border-radius: 20%; 
+    border-radius: 20%;
+    color: white;
+}
+
+div.reputation-track-checkboxes {
+    display: inline-block;
+}
+
+
+div.reputation-track button.incr-notoriety {
+    background-color: #6C0D0E;
+}
+div.reputation-track button.incr-prestige {
+    background-color: #005629;
+}
+
+span.reputation-n3, span.reputation-n2, span.reputation-n1, span.reputation-0, span.reputation-1, span.reputation-2, span.reputation-3 {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    z-index: 10;
+}
+input.reputation-value[value="-3"] ~ span.reputation-n3:before,
+input.reputation-value[value="-2"] ~ span.reputation-n2:before,
+input.reputation-value[value="-1"] ~ span.reputation-n1:before,
+input.reputation-value[value="0"] ~ span.reputation-0:before,
+input.reputation-value[value="1"] ~ span.reputation-1:before,
+input.reputation-value[value="2"] ~ span.reputation-2:before,
+input.reputation-value[value="3"] ~ span.reputation-3:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: -1px;
+    top: -2px;
+    display: block;
+    width: 22px;
+    height: 22px;
+    box-sizing: border-box;
+    -moz-border-radius: 50%; 
+    border-radius: 50%;
+}
+input.reputation-value[value="-3"] ~ span.reputation-n3:before {
+    background-color: #FF6962;
+    border: 1px solid black;
+}
+input.reputation-value[value="-2"] ~ span.reputation-n2:before {
+    background-color: #FFB6B3;
+    border: 1px solid black;
+}
+input.reputation-value[value="-1"] ~ span.reputation-n1:before {
+    background-color: #FFD5D4;
+    border: 1px solid black;
+}
+input.reputation-value[value="0"] ~ span.reputation-0:before {
+    background-color: transparent;
+    border: 1px solid black;
+}
+input.reputation-value[value="1"] ~ span.reputation-1:before {
+    background-color: #E7F1E8;
+    border: 1px solid black;
+}
+input.reputation-value[value="2"] ~ span.reputation-2:before {
+    background-color: #BDE7BD;
+    border: 1px solid black;
+}
+input.reputation-value[value="3"] ~ span.reputation-3:before {
+    background-color: #5FA777;
+    border: 1px solid black;
+}
+
+div.reputation-track-checkboxes div.checkbox {
+    position: relative;
+    margin: -1px;
+    padding: 0px;
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background-color: #FCFAF5;
+    border: 1px solid black;
+    box-sizing: border-box;
+    -moz-border-radius: 25%; 
+    border-radius: 25%;
+}
+
+div.reputation-track-checkboxes div.checkbox:nth-child(-n+16) {
+    border-color: #6C0D0E;
+}
+div.reputation-track-checkboxes div.checkbox:nth-child(n+36) {
+    border-color: #005629;
+}
+
+input.notoriety[value="1"] + div.checkbox:before {
+    content: "x";
+    position: absolute;
+    left: 3px;
+    top: -2px;
+    line-height: 13px;
+    font-family: 'Indie Flower';
+    font-weight: bold;
+    color: #6C0D0E;
+}
+input.prestige[value="1"] + div.checkbox:before {
+    content: "x";
+    position: absolute;
+    left: 3px;
+    top: -2px;
+    line-height: 13px;
+    font-family: 'Indie Flower';
+    font-weight: bold;
+    color: #005629;
+}
