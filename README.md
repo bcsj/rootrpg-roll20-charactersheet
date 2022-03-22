@@ -5,6 +5,6 @@ The sheet is split out into separate files to better manage the different module
 
 The parts may refer to any submodule in their folder using the custom command
 ```
-<!--:external: src="module name":-->
+<!--:external: src="module name"[ only="html/css/js"]:-->
 ```
 which the build script identifies and handles.
