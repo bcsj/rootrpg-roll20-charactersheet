@@ -1,0 +1,19 @@
+let species = [
+  "badger",
+  "bat",
+  "beaver",
+  "bird",
+  "cat",
+  "fox",
+  "lizard",
+  "mole",
+  "mouse",
+  "opossum",
+  "otter",
+  "owl",
+  "rabbit",
+  "racoon",
+  "squirrel",
+  "wolf",
+  "custom"
+];
