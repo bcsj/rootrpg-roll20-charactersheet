@@ -1,5 +1,15 @@
 div.nature-container {
+    position: relative;
     width: 100%;
+}
+div.nature-item span.nature-title {
+    font-family: 'Gabriela';
+    font-weight: bold;
+    display: block;
+}
+div.nature-item span.nature-rule {
+    font-size: .9em;
+    margin: 0px;
 }
 div.nature-item {
     border: 2px dashed #99925D;
@@ -8,11 +18,49 @@ div.nature-item {
     box-sizing: border-box;
     margin-bottom: 5px;
 }
-div.nature-item span.nature {
-    font-family: 'Gabriela';
-    font-weight: bold;
-}
-div.nature-item p {
-    font-size: .9em;
+
+/* Style buttons on container */
+div.nature-container button.repcontrol_edit, 
+div.nature-container button.add-nature {
+    position: absolute;
+    top: 0px;
+    box-sizing: border-box;
+    border: 1px solid #99925D;
+    background: none;
+    background-color: #FCFAF5;
     margin: 0px;
+    outline: inherit;
+    -moz-border-radius: 5px; 
+    border-radius: 5px;
+    padding: 1px 6px;
+}
+div.nature-container button.repcontrol_edit:hover, 
+div.nature-container button.add-nature:hover {
+    background-color: rgb(200, 200, 170);
+}
+div.nature-container button.repcontrol_edit::after, 
+div.nature-container button.add-nature::after {
+    font-family: Pictos;
+}
+   
+/* Add button */
+div.nature-container button.add-nature {
+    right: 75px;
+}
+
+div.nature-container button.add-nature::after {
+    content: ' &'; /* "+" symbol in Pictos font */
+}
+
+/* Built-in fieldset button groups */
+[data-groupname=repeating_natures] > button.btn.repcontrol_add { 
+    /* Make the button disappear */
+    margin: 0px; padding: 0px; line-height: 0px; height: 0px; width: 0px; overflow: hidden; border: 0; 
+}
+[data-groupname=repeating_natures] > button.btn.repcontrol_edit {
+    right: 0;
+    width: 71px;
+}
+[data-groupname=repeating_natures] > button.btn.repcontrol_edit::after { 
+    content: " y"; /* "gear" symbol in Pictos font */
 }

@@ -84,7 +84,7 @@ def build(filedata, lws = 0):
                     
                     issues += build(ext, lws_)
                     
-                    if is_only and ext['only'] != 'html':
+                    if not (is_only and ext['only'] != 'html'):
                         with open(tmp_html, 'a') as f_out:
                             f_out.write('\n')
                 else:

@@ -1,0 +1,44 @@
+/* nature list */
+div.overlay-add-nature-content {
+    position: relative;
+    margin: 10px auto;
+    width: 300px;
+}
+div.nature-list-item {
+    border: 2px dashed #99925D;
+    background-color: #FCFAF5;
+    padding: 5px;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+}
+input.nature-is-starting[value="1"] + div.nature-list-item {
+    border: 2px solid red;
+}
+div.nature-list-item div.action-button {
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    height: 0;
+    display: none;
+}
+div.nature-list-item:hover div.action-button {
+    display: block;
+}
+div.nature-list-item div.action-button button {
+    font-size: .8em;
+    margin: 0;
+    padding: 2px;
+    line-height: .8em;
+}
+div.nature-list-item span.nature-name {
+    font-family: 'Gabriela';
+    font-weight: bold;
+    border: none;
+    display: block;
+}
+div.nature-list-item span.nature-rule {
+    font-size: .9em;
+}
+/* Hide fieldset buttons */
+[data-groupname=repeating_add-nature] > button.btn.repcontrol_add { display: none; }
+[data-groupname=repeating_add-nature] > button.btn.repcontrol_edit { display: none; }
