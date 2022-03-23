@@ -9,14 +9,14 @@ def get_file_dir(fn):
     fn_path = Path(fn).resolve()
     return fn_path.parent
 
-def parse_inline(props):
+def parse_inline(props, curr_path):
     pieces = [p for p in re.split("( |\\\".*?\\\"|'.*?')", props) if p.strip()]
     ext = dict()
     for i in range(len(pieces)):
         p = pieces[i]
         if p[-1] == '=':
             if p[:-1] == 'src':
-                ext['path'] = Path(dev_dir, pieces[i+1][1:-1])
+                ext['path'] = Path(curr_path, pieces[i+1][1:-1])
                 ext['src'] = pieces[i+1][1:-1]
             if p[:-1] == 'only':
                 ext['only'] = pieces[i+1][1:-1]
@@ -27,6 +27,7 @@ def build(filedata, lws = 0):
     fn_css = Path(filedata['path'], filedata['src'] + '.css')
     fn_js = Path(filedata['path'], filedata['src'] + '.js')
 
+    issues = 0
     if exists(fn_css):
         print(f" -Detected CSS file: {filedata['src']}")
         f_out = open(tmp_css, 'a')
@@ -44,6 +45,7 @@ def build(filedata, lws = 0):
     else:
         if not ('only' in filedata and filedata['only'] != 'css'):
             print(f"!-Failed to find CSS file: {filedata['src']}")
+            issues += 1
         
     if exists(fn_js):
         print(f" -Detected JS file: {filedata['src']}")
@@ -62,6 +64,7 @@ def build(filedata, lws = 0):
     else:
         if 'only' in filedata and filedata['only'] == 'js':
             print(f"!-Failed to find JS file: {filedata['src']}")
+            issues += 1
         
     if exists(fn_html):
         print(f" -Detected HTML file: {filedata['src']}")
@@ -74,12 +77,12 @@ def build(filedata, lws = 0):
                 lws_ = len(line) - len(line.lstrip())
                 sp = line.lstrip().split(":")
                 if sp[0] == '<!--' and sp[1] == 'external':
-                    ext = parse_inline(sp[2].lstrip())
+                    ext = parse_inline(sp[2].lstrip(), filedata['path'])
                     is_only = 'only' in ext
                     str_only = ext['only'].upper()+'-' if is_only else ''
                     print(f" -Detected external {str_only}reference: {ext['src']}")
                     
-                    build(ext, lws_)
+                    issues += build(ext, lws_)
                     
                     if is_only and ext['only'] != 'html':
                         with open(tmp_html, 'a') as f_out:
@@ -90,7 +93,10 @@ def build(filedata, lws = 0):
     else:
         if not ('only' in filedata and filedata['only'] != 'html'):
             print(f"!-Failed to find HTML file: {filedata['src']}")
+            issues += 1
+
     print(f" -Completed {filedata['src']}")
+    return issues
     
 def post_process():
     print(" -Moves worker script to html")
@@ -142,5 +148,6 @@ if __name__ == "__main__":
         'path': dev_dir,
         'src': 'core'
     }
-    build(core)
+    issues = build(core)
     post_process()
+    print(f"Completed with {issues} issues")
