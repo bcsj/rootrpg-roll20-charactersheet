@@ -6,23 +6,45 @@ clearList.push({
 
 /* Add drives */
 on("clicked:add-drive", function() {
-	setAttrs({
-		'overlay-visible': "1",
-		'overlay-add-drive': "1"
-	});
 	getAttrs(["class"], function(val) {
 		let attrs = {};
-		Object.keys(drives).forEach(key => {
-			let id = generateRowID();
-			let playerClass = val['class'];
-            let classDrives = vagabonds[playerClass]['drives'].map( e => e['name'] );
-			let isStartingDrive =  classDrives.indexOf(key) > -1;
-			attrs["repeating_add-drives_" + id + "_drive-is-starting"] = isStartingDrive ? "1" : "0";
-			attrs["repeating_add-drives_" + id + "_add-drive-key"] = key;
-			attrs["repeating_add-drives_" + id + "_add-drive-title"] = key;
-			attrs["repeating_add-drives_" + id + "_add-drive-rule"] = drives[key]['text'];
-		});
-		setAttrs(attrs);
+        attrs['overlay-visible'] = "1";
+		attrs['overlay-add-drive'] = "1";
+        attrs['overlay-header'] = "Add Drive";
+        
+        let playerClass = val['class'];
+        let classDrives = vagabonds[playerClass]['drives'].map( e => e['name'] );
+        let currDrives = [];
+        getSectionIDs('repeating_drives', function(idarray) {
+            list = [];
+            for(var k=0; k < idarray.length; k++) {
+                list.push(`repeating_drives_${idarray[k]}_drive-title`);
+            }
+            getAttrs(list, function(val) {
+                currDrives = Object.values(val);
+                
+                classDrives.forEach(key => {
+                    if (currDrives.indexOf(key) == -1) {
+                        let id = generateRowID();
+                        attrs["repeating_add-drives_" + id + "_drive-is-starting"] = "1";
+                        attrs["repeating_add-drives_" + id + "_add-drive-key"] = key;
+                        attrs["repeating_add-drives_" + id + "_add-drive-title"] = key;
+                        attrs["repeating_add-drives_" + id + "_add-drive-rule"] = drives[key]['text'];
+                    }
+                });
+                    
+                Object.keys(drives).forEach(key => {
+                    if (currDrives.indexOf(key) == -1 && classDrives.indexOf(key) == -1) {
+                        let id = generateRowID();
+                        attrs["repeating_add-drives_" + id + "_drive-is-starting"] = "0";
+                        attrs["repeating_add-drives_" + id + "_add-drive-key"] = key;
+                        attrs["repeating_add-drives_" + id + "_add-drive-title"] = key;
+                        attrs["repeating_add-drives_" + id + "_add-drive-rule"] = drives[key]['text'];
+                    }
+                });
+                setAttrs(attrs);
+            });
+        });
 	});
 });
 on("clicked:repeating_add-drives:add-the-drive", function(ev) {

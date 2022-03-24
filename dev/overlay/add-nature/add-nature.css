@@ -1,10 +1,15 @@
 /* nature list */
-div.overlay-add-nature-content {
-    position: relative;
-    margin: 10px auto;
-    width: 300px;
+div.overlay-add-nature-content { }
+div.overlay-add-nature-list div.repcontainer {
+    box-sizing: border-box;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-auto-rows: 1fr;
+    gap: 5px;
 }
 div.nature-list-item {
+    height: 100%;
     border: 2px dashed #99925D;
     background-color: #FCFAF5;
     padding: 5px;

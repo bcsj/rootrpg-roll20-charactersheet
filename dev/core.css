@@ -8,10 +8,17 @@
 .fontello {
     font-family: 'fontello';
 }
+.pictos {
+    font-family: 'Pictos';
+}
 
 h1, h2, h3 {
     font-family: 'Indie Flower';
     color: #574F30;
+}
+
+button[type="roll"]:before {
+    content: ""!important;
 }
 
 /* Core specific */

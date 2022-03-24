@@ -6,7 +6,6 @@ function clear_overlay() {
     attrs['overlay-visible'] = "0";
     clearList.map(function(e) {
         attrs[`overlay-${e['name']}`] = "0";
-        console.log(attrs);
         if (e.hasOwnProperty('repeating_section')) {
             getSectionIDs(e['repeating_section'], function(idarray) {
                 for(var k=0; k < idarray.length; k++) {
