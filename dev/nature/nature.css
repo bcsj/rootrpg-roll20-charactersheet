@@ -2,10 +2,33 @@ div.nature-container {
     position: relative;
     width: 100%;
 }
+div.nature-item div.nature-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 div.nature-item span.nature-title {
     font-family: 'Gabriela';
     font-weight: bold;
     display: block;
+}
+div.nature-item button.nature-to-chat { 
+    display: none; 
+    line-height: 11px;
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+    margin: 0;
+	cursor: pointer;
+	outline: inherit;
+    box-shadow: none;
+}
+div.nature-item:hover .nature-to-chat {
+    display: inline;
+}
+div.nature-item .nature-to-chat:hover {
+    color: red;
 }
 div.nature-item span.nature-rule {
     font-size: .9em;

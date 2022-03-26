@@ -1,0 +1,65 @@
+/* https://codepen.io/quadbaup/pen/rKOKQv */
+
+.sheet-rolltemplate-thought div.sheet-template-container {
+    display: inline-block;
+}
+
+.sheet-rolltemplate-thought div.sheet-template-thought {
+    background-color: #FCFAF5;
+    margin: 20px 10px 10px 0px;
+    padding: 20px;
+    border-radius: 30px;
+    position: relative;
+    
+}
+.sheet-rolltemplate-thought div.sheet-template-content {
+    position: relative;
+    z-index: 1;
+}
+.sheet-rolltemplate-thought div.sheet-template-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.sheet-rolltemplate-thought div.sheet-template-title {
+    font-family: 'Gabriela';
+    font-weight: bold;
+    font-size: 1em;
+    color: #99925D;
+}
+.sheet-rolltemplate-thought div.sheet-template-tag {
+    color: rgba(0,0,0,.5);
+    line-height: 0px;
+    font-size: .75em;
+}
+.sheet-rolltemplate-thought div.sheet-template-description {
+    font-size: .85em;
+}
+
+.sheet-rolltemplate-thought div.sheet-template-bubbles-1,
+.sheet-rolltemplate-thought div.sheet-template-bubbles-2 {
+    content: "";
+    background-color: #FCFAF5;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    z-index: 0;
+}
+.sheet-rolltemplate-thought div.sheet-template-bubbles-1 {
+    width: 44px;
+    height: 44px;
+    bottom: -12px;
+    right: 28px;
+    box-shadow: 50px -30px 0 -12px #FCFAF5;
+}
+.sheet-rolltemplate-thought div.sheet-template-bubbles-2 {
+    top: -10px;
+    left: 26px;
+    width: 30px;
+    height: 30px;
+    box-shadow: -40px  34px 0   0   #FCFAF5,
+                 28px   6px 0  -2px #FCFAF5,
+                 24px -17px 0  -6px #FCFAF5,
+                  5px -25px 0 -10px #FCFAF5;
+
+}

@@ -14,7 +14,7 @@ div.drive-item span.drive-title {
 }
 div.drive-item button.drive-to-chat { 
     display: none; 
-    line-height: 12px;
+    line-height: 11px;
     background: none;
 	color: inherit;
 	border: none;

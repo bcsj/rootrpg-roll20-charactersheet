@@ -3,8 +3,13 @@
     <h3>Your Nature</h3>
     <fieldset class="repeating_natures">
         <div class="nature-item">
-            <input type="hidden" name="attr_nature-title" />
-            <span class="nature-title" name="attr_nature-title"></span>
+            <div>
+                <input type="hidden" name="attr_nature-title" />
+                <div class="nature-title">
+                    <span class="nature-title" name="attr_nature-title"></span>
+                    <button type="roll" name="roll_output" class="pictos nature-to-chat" value="&{template:thought} {{name=@{nature-title}}} {{tag=Nature}} {{rule=@{nature-rule}}}">w</button>
+                </div>
+            </div>
             <input type="hidden" name="attr_nature-rule" />
             <span class="nature-rule" name="attr_nature-rule"></span>
         </div>
