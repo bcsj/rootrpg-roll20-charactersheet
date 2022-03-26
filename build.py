@@ -32,9 +32,9 @@ def build(filedata, lws = 0):
         print(f" -Detected CSS file: {filedata['src']}")
         f_out = open(tmp_css, 'a')
         f_out.write('\n\n')
-        f_out.write('/*************************************\n')
+        f_out.write('/* ===================================\n')
         f_out.write('    ' + filedata['src'] + '\n')
-        f_out.write('*************************************/\n')
+        f_out.write('=================================== */\n')
         f_out.write('\n')
         with open(fn_css) as f:
             line = f.readline()
@@ -51,9 +51,9 @@ def build(filedata, lws = 0):
         print(f" -Detected JS file: {filedata['src']}")
         f_out = open(tmp_js, 'a')
         f_out.write('\n\n')
-        f_out.write('/*************************************\n')
+        f_out.write('/* ===================================\n')
         f_out.write('    ' + filedata['src'] + '\n')
-        f_out.write('*************************************/\n')
+        f_out.write('=================================== */\n')
         f_out.write('\n')
         with open(fn_js) as f:
             line = f.readline()
