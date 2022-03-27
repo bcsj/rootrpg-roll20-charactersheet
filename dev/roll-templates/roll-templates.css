@@ -63,3 +63,62 @@
                   5px -25px 0 -10px #FCFAF5;
 
 }
+
+
+
+.sheet-rolltemplate-statroll div.sheet-template-container {
+    display: inline-block;
+    width: 100%;
+}
+.sheet-rolltemplate-statroll div.sheet-template-content {
+    padding: 15px 10px 10px 10px;
+    border: 2px dashed #574F30;
+    -moz-border-radius: 10%; 
+    border-radius: 10%;
+    background-color: #FCFAF5;
+    box-sizing: border-box;
+    width: 100%;
+}
+.sheet-rolltemplate-statroll div.sheet-template-stat {
+    text-align: center;
+}
+.sheet-rolltemplate-statroll span.sheet-template-stat {
+    font-weight: bolder;
+    font-family: 'Gabriela';
+    color: #574F30;
+    font-size: 1.4em;
+}
+.sheet-rolltemplate-statroll span.sheet-template-stat-mod {
+    font-family: 'Gabriela';
+    color: rgba(0,0,0,.5);
+    font-size: 1.1em;
+}
+.sheet-rolltemplate-statroll span.sheet-template-stat-mod .inlinerollresult {
+    background: none;
+    border: none;
+    font-weight: normal;
+    padding: 0;
+}
+
+.sheet-rolltemplate-statroll hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-top: 2px solid #574F30;
+}
+.sheet-rolltemplate-statroll div.sheet-template-roll {
+    text-align: center;
+    font-size: 1.4em;
+}
+.sheet-rolltemplate-statroll div.sheet-template-roll .inlinerollresult {
+    background: none;
+    border: none;
+}
+.sheet-rolltemplate-statroll div.sheet-template-roll-outcome {
+    text-align: center;
+    font-size: 1.1em;
+    font-family: 'Gabriela';
+    color: rgba(0,0,0,.5);
+    font-size: 0.9em;
+    font-style: italic;
+}
+

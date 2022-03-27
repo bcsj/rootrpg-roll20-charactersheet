@@ -1,6 +1,5 @@
 <rolltemplate class="sheet-rolltemplate-thought">
     <div class="sheet-template-container">
-        
         <div class="sheet-template-thought">
             <div class="sheet-template-bubbles-1"></div>
             <div class="sheet-template-bubbles-2"></div>
@@ -12,6 +11,39 @@
                 <div class="sheet-template-description">{{rule}}</div>
             </div>
         </div>
-        
+    </div>
+</rolltemplate>
+
+<rolltemplate class="sheet-rolltemplate-statroll">
+    <div class="sheet-template-container">
+        <div class="sheet-template-statroll">
+            <div class="sheet-template-content">
+                <div class="sheet-template-stat">
+                    <span class="sheet-template-stat">{{stat}}</span>
+                    {{#rollGreater() mod 0}}
+                        <span class="sheet-template-stat-mod">(+{{mod}})</span>
+                    {{/rollGreater() mod 0}}
+                    {{#^rollGreater() mod 0}}
+                        <span class="sheet-template-stat-mod">({{mod}})</span>
+                    {{/^rollGreater() mod 0}}
+                </div>
+                <hr />
+                <div class="sheet-template-roll">{{rollvalue}}</div>
+                <div class="sheet-template-roll-outcome">(
+                    {{#rollBetween() rollvalue 2 6}}
+                        Failure!
+                    {{/rollBetween() rollvalue 2 6}}
+                    {{#rollBetween() rollvalue 7 9}}
+                        Partial success!
+                    {{/rollBetween() rollvalue 7 9}}
+                    {{#rollBetween() rollvalue 10 11}}
+                        Full success!
+                    {{/rollBetween() rollvalue 10 11}}
+                    {{#rollGreater() rollvalue 11}}
+                        Triumph!
+                    {{/rollGreater() rollvalue 11}}
+                )</div>
+            </div>
+        </div>
     </div>
 </rolltemplate>

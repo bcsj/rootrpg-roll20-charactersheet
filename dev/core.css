@@ -52,17 +52,6 @@ div.subcol:last-child {
     padding-left: 2.5px;
 }
 
-/*input[type="text"], select {
-    padding: 0;
-    margin: 0;
-    width: 100px;
-    box-sizing: border-box;
-    border-width: 0px;
-    border-radius: 0px;
-    border-bottom: 1px solid black;
-    background-color: transparent;
-}*/
-
 /* Portrait */
 div.vagabond-portrait {
     background-color: black;

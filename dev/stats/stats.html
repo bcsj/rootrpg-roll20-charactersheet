@@ -1,22 +1,50 @@
 <div class="stats-container">
-    <input type="hidden" name="attr_char-charm-base" value="0" />
-    <input type="hidden" name="attr_char-charm-bonus" value="0" />
-    <input type="text" class="stats-value" name="attr_char-charm" value="0" readonly />
-    <h2 class="inline">Charm</h2><br />
-    <input type="hidden" name="attr_char-cunning-base" value="0" />
-    <input type="hidden" name="attr_char-cunning-bonus" value="0" />
-    <input type="text" class="stats-value" name="attr_char-cunning" value="-1" readonly />
-    <h2 class="inline">Cunning</h2><br />
-    <input type="hidden" name="attr_char-finesse-base" value="0" />
-    <input type="hidden" name="attr_char-finesse-bonus" value="0" />
-    <input type="text" class="stats-value" name="attr_char-finesse" value="+2" readonly />
-    <h2 class="inline">Finesse</h2><br />
-    <input type="hidden" name="attr_char-luck-base" value="0" />
-    <input type="hidden" name="attr_char-luck-bonus" value="0" />
-    <input type="text" class="stats-value" name="attr_char-luck" value="+1" readonly />
-    <h2 class="inline">Luck</h2><br />
-    <input type="hidden" name="attr_char-might-base" value="0" />
-    <input type="hidden" name="attr_char-might-bonus" value="0" />
-    <input type="text" class="stats-value" name="attr_char-might" value="0" readonly />
-    <h2 class="inline">Might</h2>
+    <div class="stats-edit-mode">
+        <label class="pictos"><input type="checkbox" name="attr_stats-edit-mode"/>y</label>
+    </div>
+    <input type="hidden" name="attr_charm-base" value="0" />
+    <input type="hidden" name="attr_charm-bonus" value="0" />
+    <span class="stats-value" name="attr_charm"></span>
+    <button type="roll" class="stats-roll" value="&{template:statroll} {{stat=Charm}} {{mod=[[@{charm}]]}} {{rollvalue=[[2d6 + @{charm}]]}}">Charm</button><br />
+    <input type="hidden" class="stats-edit" name="attr_charm-edit" value="1" />
+    <div class="stats-edit">
+        <span>Base:</span><input type="text" name="attr_charm-base" />
+        <span>Bonus:</span><input type="text" name="attr_charm-bonus" />
+    </div>
+    <input type="hidden" name="attr_cunning-base" value="0" />
+    <input type="hidden" name="attr_cunning-bonus" value="0" />
+    <span class="stats-value" name="attr_cunning"></span>
+    <button type="roll" class="stats-roll" value="&{template:statroll} {{stat=Cunning}} {{mod=[[@{cunning}]]}} {{rollvalue=[[2d6 + @{cunning}]]}}">Cunning</button><br />
+    <input type="hidden" class="stats-edit" name="attr_cunning-edit" value="1" />
+    <div class="stats-edit">
+        <span>Base:</span><input type="text" name="attr_cunning-base" />
+        <span>Bonus:</span><input type="text" name="attr_cunning-bonus" />
+    </div>
+    <input type="hidden" name="attr_finesse-base" value="0" />
+    <input type="hidden" name="attr_finesse-bonus" value="0" />
+    <span class="stats-value" name="attr_finesse"></span>
+    <button type="roll" class="stats-roll" value="&{template:statroll} {{stat=Finesse}} {{mod=[[@{finesse}]]}} {{rollvalue=[[2d6 + @{finesse}]]}}">Finesse</button><br />
+    <input type="hidden" class="stats-edit" name="attr_finesse-edit" value="1" />
+    <div class="stats-edit">
+        <span>Base:</span><input type="text" name="attr_finesse-base" />
+        <span>Bonus:</span><input type="text" name="attr_finesse-bonus" />
+    </div>
+    <input type="hidden" name="attr_luck-base" value="0" />
+    <input type="hidden" name="attr_luck-bonus" value="0" />
+    <span class="stats-value" name="attr_luck"></span>
+    <button type="roll" class="stats-roll" value="&{template:statroll} {{stat=Luck}} {{mod=[[@{luck}]]}} {{rollvalue=[[2d6 + @{luck}]]}}">Luck</button><br />
+    <input type="hidden" class="stats-edit" name="attr_luck-edit" value="1" />
+    <div class="stats-edit">
+        <span>Base:</span><input type="text" name="attr_luck-base" />
+        <span>Bonus:</span><input type="text" name="attr_luck-bonus" />
+    </div>
+    <input type="hidden" name="attr_might-base" value="0" />
+    <input type="hidden" name="attr_might-bonus" value="0" />
+    <span class="stats-value" name="attr_might"></span>
+    <button type="roll" class="stats-roll" value="&{template:statroll} {{stat=Might}} {{mod=[[@{might}]]}} {{rollvalue=[[2d6 + @{might}]]}}">Might</button>
+    <input type="hidden" class="stats-edit" name="attr_might-edit" value="1" />
+    <div class="stats-edit">
+        <span>Base:</span><input type="text" name="attr_might-base" />
+        <span>Bonus:</span><input type="text" name="attr_might-bonus" />
+    </div>
 </div>
