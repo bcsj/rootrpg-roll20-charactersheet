@@ -1,0 +1,105 @@
+div.moves-container {
+    position: relative;
+    width: 100%;
+}
+div.move-item input.display-flag {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+div.move-item input.move-rule-display[value="0"] + span.move-rule {
+    display: none;
+}
+div.move-item input.move-rule-display[value="1"] + span.move-rule {
+    display: inline;
+}
+
+div.move-item div.move-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+div.move-item span.move-title {
+    font-family: 'Gabriela';
+    font-weight: bold;
+    font-size: 1em;
+}
+div.move-item button.move-to-chat { 
+    display: none; 
+    line-height: 11px;
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+    margin: 0;
+	cursor: pointer;
+	outline: inherit;
+    box-shadow: none;
+    z-index: 100;
+}
+div.move-item:hover .move-to-chat {
+    display: inline;
+}
+div.move-item .move-to-chat:hover {
+    color: red;
+}
+div.move-item span.move-rule {
+    font-size: .9em;
+    margin: 0px;
+}
+div.move-item {
+    border: 2px dashed #99925D;
+    background-color: #FCFAF5;
+    padding: 5px;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+}
+
+/* Style buttons on container */
+div.moves-container button.repcontrol_edit, 
+div.moves-container button.add-move {
+    position: absolute;
+    top: 0px;
+    box-sizing: border-box;
+    border: 1px solid #99925D;
+    background: none;
+    background-color: #FCFAF5;
+    margin: 0px;
+    outline: inherit;
+    -moz-border-radius: 5px; 
+    border-radius: 5px;
+    padding: 1px 6px;
+}
+div.moves-container button.repcontrol_edit:hover, 
+div.moves-container button.add-move:hover {
+    background-color: rgb(200, 200, 170);
+}
+div.moves-container button.repcontrol_edit::after, 
+div.moves-container button.add-move::after {
+    font-family: Pictos;
+}
+   
+/* Add button */
+div.moves-container button.add-move {
+    right: 75px;
+}
+
+div.moves-container button.add-move::after {
+    content: ' &'; /* "+" symbol in Pictos font */
+}
+
+/* Built-in fieldset button groups */
+[data-groupname=repeating_moves] > button.btn.repcontrol_add { 
+    /* Make the button disappear */
+    margin: 0px; padding: 0px; line-height: 0px; height: 0px; width: 0px; overflow: hidden; border: 0; 
+}
+[data-groupname=repeating_moves] > button.btn.repcontrol_edit {
+    right: 0;
+    width: 71px;
+}
+[data-groupname=repeating_moves] > button.btn.repcontrol_edit::after { 
+    content: " y"; /* "gear" symbol in Pictos font */
+}

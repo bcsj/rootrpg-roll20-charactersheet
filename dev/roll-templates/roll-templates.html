@@ -28,21 +28,30 @@
                     {{/^rollGreater() mod 0}}
                 </div>
                 <hr />
-                <div class="sheet-template-roll">{{rollvalue}}</div>
-                <div class="sheet-template-roll-outcome">(
-                    {{#rollBetween() rollvalue 2 6}}
+                {{#rollLess() rollvalue 7}}
+                    <div class="sheet-template-roll roll-outcome-failure">{{rollvalue}}</div>
+                    <div class="sheet-template-roll-outcome">(
                         Failure!
-                    {{/rollBetween() rollvalue 2 6}}
-                    {{#rollBetween() rollvalue 7 9}}
+                    )</div>
+                {{/rollLess() rollvalue 7}}
+                {{#rollBetween() rollvalue 7 9}}
+                    <div class="sheet-template-roll roll-outcome-partial">{{rollvalue}}</div>
+                    <div class="sheet-template-roll-outcome">(
                         Partial success!
-                    {{/rollBetween() rollvalue 7 9}}
-                    {{#rollBetween() rollvalue 10 11}}
+                    )</div>
+                {{/rollBetween() rollvalue 7 9}}
+                {{#rollBetween() rollvalue 10 11}}
+                    <div class="sheet-template-roll roll-outcome-full">{{rollvalue}}</div>
+                    <div class="sheet-template-roll-outcome">(
                         Full success!
-                    {{/rollBetween() rollvalue 10 11}}
-                    {{#rollGreater() rollvalue 11}}
+                    )</div>
+                {{/rollBetween() rollvalue 10 11}}
+                {{#rollGreater() rollvalue 11}}
+                    <div class="sheet-template-roll roll-outcome-triumph">{{rollvalue}}</div>
+                    <div class="sheet-template-roll-outcome">(
                         Triumph!
-                    {{/rollGreater() rollvalue 11}}
-                )</div>
+                    )</div>
+                {{/rollGreater() rollvalue 11}}
             </div>
         </div>
     </div>

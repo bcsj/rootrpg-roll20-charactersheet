@@ -1,0 +1,50 @@
+/* moves list */
+div.overlay-add-move-content { }
+div.overlay-add-move-list div.repcontainer {
+    box-sizing: border-box;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-auto-rows: .1fr;
+    gap: 5px;
+}
+div.moves-list-item {
+    height: 100%;
+    border: 2px dashed #99925D;
+    background-color: #FCFAF5;
+    padding: 5px;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+}
+input.move-is-starting[value="1"] + div.moves-list-item {
+    border: 2px solid red;
+}
+div.moves-list-item div.action-button {
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    height: 0;
+    display: none;
+}
+div.moves-list-item:hover div.action-button {
+    display: block;
+}
+div.moves-list-item div.action-button button {
+    font-size: .8em;
+    margin: 0;
+    padding: 2px;
+    line-height: .8em;
+}
+div.moves-list-item span.move-name {
+    font-family: 'Gabriela';
+    font-weight: bold;
+    border: none;
+    display: block;
+}
+div.moves-list-item span.move-rule {
+    font-size: .9em;
+}
+
+/* Hide fieldset buttons */
+[data-groupname=repeating_add-moves] > button.btn.repcontrol_add { display: none; }
+[data-groupname=repeating_add-moves] > button.btn.repcontrol_edit { display: none; }

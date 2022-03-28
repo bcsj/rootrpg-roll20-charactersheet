@@ -122,3 +122,40 @@
     font-style: italic;
 }
 
+.sheet-rolltemplate-statroll div.sheet-roll-outcome-failure .inlinerollresult {
+    color: red;
+}
+.sheet-rolltemplate-statroll div.sheet-roll-outcome-partial .inlinerollresult {
+    color: black;
+}
+.sheet-rolltemplate-statroll div.sheet-roll-outcome-full .inlinerollresult {
+    color: green;
+}
+.sheet-rolltemplate-statroll div.sheet-roll-outcome-triumph .inlinerollresult {
+    color: #FCFAF5;
+    text-shadow: 2px 2px 0 green,
+        -2px 2px 0 green,
+        2px -2px 0 green,
+        -2px -2px 0 green,
+        0px 2px 0 green,
+        0px -2px 0 green,
+        -2px 0px 0 green,
+        2px 0px 0 green,
+        2px 2px 0 green,
+        -2px 2px 0 green,
+        2px -2px 0 green,
+        -2px -2px 0 green,
+        0px 2px 0 green,
+        0px -2px 0 green,
+        -2px 0px 0 green,
+        2px 0px 0 green,
+        2px 2px 0 green,
+        -2px 2px 0 green,
+        2px -2px 0 green,
+        -2px -2px 0 green,
+        2px 2px 0 green,
+        -2px 2px 0 green,
+        2px -2px 0 green,
+        -2px -2px 0 green;
+}
+

@@ -1,0 +1,19 @@
+<div class="moves-container">    
+    <button class="add-move" type="action" name="act_add-move">Add</button>
+    <h3>Your Moves</h3>
+    <fieldset class="repeating_moves">
+        <div class="move-item">
+            <div>
+                <input type="hidden" name="attr_move-title" />
+                <input type="checkbox" class="display-flag" name="attr_display-flag" />
+                <div class="move-title">
+                    <span class="move-title" name="attr_move-title"></span>
+                    <button type="roll" name="roll_output" class="pictos move-to-chat" value="&{template:thought} {{name=@{move-title}}} {{tag=Move}} {{rule=@{move-rule}}}">w</button>
+                </div>
+            </div>
+            <input type="hidden" name="attr_move-rule" />
+            <input type="hidden" class="move-rule-display" name="attr_move-rule-display" />
+            <span class="move-rule" name="attr_move-rule"></span>
+        </div>
+    </fieldset>
+</div>
