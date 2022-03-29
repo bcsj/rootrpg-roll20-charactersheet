@@ -1,8 +1,8 @@
-div.moves-container {
+div.feats-container {
     position: relative;
     width: 100%;
 }
-div.move-item input.display-flag {
+div.feat-item input.display-flag {
     position: absolute;
     top: 0px;
     right: 0px;
@@ -10,26 +10,26 @@ div.move-item input.display-flag {
     height: 100%;
     opacity: 0;
 }
-div.move-item input.move-rule-display[value="0"] + span.move-rule {
+div.feat-item input.feat-rule-display[value="0"] + span.feat-rule {
     display: none;
 }
-div.move-item input.move-rule-display[value="1"] + span.move-rule {
+div.feat-item input.feat-rule-display[value="1"] + span.feat-rule {
     display: inline;
 }
 
-div.move-item div.move-title {
+div.feat-item div.feat-title {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-div.move-item span.move-title {
+div.feat-item span.feat-title {
     font-family: 'Gabriela';
     font-weight: bold;
     font-size: 1em;
 }
-div.move-item button.move-to-chat { 
+div.feat-item button.feat-to-chat { 
     display: none; 
-    line-height: 11px;
+    line-height: 9px;
     background: none;
 	color: inherit;
 	border: none;
@@ -40,27 +40,28 @@ div.move-item button.move-to-chat {
     box-shadow: none;
     z-index: 100;
 }
-div.move-item:hover .move-to-chat {
+div.feat-item:hover .feat-to-chat {
     display: inline;
 }
-div.move-item .move-to-chat:hover {
+div.feat-item .feat-to-chat:hover {
     color: red;
 }
-div.move-item span.move-rule {
-    font-size: .9em;
+div.feat-item span.feat-rule {
+    font-size: .8em;
     margin: 0px;
 }
-div.move-item {
-    border: 2px dashed #99925D;
+div.feat-item {
+    border: 1px dashed #99925D;
     background-color: #FCFAF5;
-    padding: 5px;
+    padding: 1px 5px;
     box-sizing: border-box;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
+    line-height: normal;
 }
 
 /* Style buttons on container */
-div.moves-container button.repcontrol_edit, 
-div.moves-container button.add-move {
+div.feats-container button.repcontrol_edit, 
+div.feats-container button.add-feat {
     position: absolute;
     top: 0px;
     box-sizing: border-box;
@@ -73,56 +74,58 @@ div.moves-container button.add-move {
     border-radius: 5px;
     padding: 1px 6px;
 }
-div.moves-container button.repcontrol_edit:hover, 
-div.moves-container button.add-move:hover {
+div.feats-container button.repcontrol_edit:hover, 
+div.feats-container button.add-feat:hover {
     background-color: rgb(200, 200, 170);
 }
-div.moves-container button.repcontrol_edit::after, 
-div.moves-container button.add-move::after {
+div.feats-container button.repcontrol_edit::after, 
+div.feats-container button.add-feat::after {
     font-family: Pictos;
 }
    
 /* Add button */
-div.moves-container button.add-move {
+div.feats-container button.add-feat {
     right: 75px;
 }
 
-div.moves-container button.add-move::after {
+div.feats-container button.add-feat::after {
     content: ' &'; /* "+" symbol in Pictos font */
 }
 
 /* Built-in fieldset button groups */
-[data-groupname=repeating_moves] > button.btn.repcontrol_add { 
+[data-groupname=repeating_feats] > button.btn.repcontrol_add { 
     /* Make the button disappear */
     margin: 0px; padding: 0px; line-height: 0px; height: 0px; width: 0px; overflow: hidden; border: 0; 
 }
-[data-groupname=repeating_moves] > button.btn.repcontrol_edit {
+[data-groupname=repeating_feats] > button.btn.repcontrol_edit {
     right: 0;
     width: 71px;
 }
-[data-groupname=repeating_moves] > button.btn.repcontrol_edit::after { 
+[data-groupname=repeating_feats] > button.btn.repcontrol_edit::after { 
     content: " y"; /* "gear" symbol in Pictos font */
 }
 
-[data-groupname=repeating_moves] a.btn.repcontrol_move { 
+[data-groupname=repeating_feats] a.btn.repcontrol_move { 
     position: relative;
     left: -20px;
-    width: 30px;
-    height: 30px;
-    padding: 6px;
+    width: 20px;
+    height: 20px;
+    padding: 0px 2px;
     box-sizing: border-box;
     z-index: 10;
 }
-[data-groupname=repeating_moves] button.btn.repcontrol_del { 
+[data-groupname=repeating_feats] button.btn.repcontrol_del { 
     position: relative;
     right: -20px;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     padding: 0px 2px;
     box-sizing: border-box;
     z-index: 10;
 }
 
-div.repcontrol[data-groupname=repeating_moves] {
+div.repcontrol[data-groupname=repeating_feats] {
     height: 3px;
 }
+
+

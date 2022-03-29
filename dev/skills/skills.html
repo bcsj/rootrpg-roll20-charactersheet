@@ -1,0 +1,19 @@
+<div class="skills-container">    
+    <button class="add-skill" type="action" name="act_add-skill">Add</button>
+    <h3>Skills</h3>
+    <fieldset class="repeating_skills">
+        <div class="skill-item">
+            <div>
+                <input type="hidden" name="attr_skill-title" />
+                <input type="checkbox" class="display-flag" name="attr_display-flag" />
+                <div class="skill-title">
+                    <span class="skill-title" name="attr_skill-title"></span>
+                    <button type="roll" name="roll_output" class="pictos skill-to-chat" value="&{template:thought} {{name=@{skill-title}}} {{tag=Weapon skill}} {{rule=@{skill-rule}}}">w</button>
+                </div>
+            </div>
+            <input type="hidden" name="attr_skill-rule" />
+            <input type="hidden" class="skill-rule-display" name="attr_skill-rule-display" value="0" />
+            <span class="skill-rule" name="attr_skill-rule"></span>
+        </div>
+    </fieldset>
+</div>

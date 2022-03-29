@@ -1,18 +1,22 @@
-function rep_track_incr(tname) {
+function rep_track_incr(tname, delta) {
     let tlength = (tname == "notoriety") ? 9 : 15;
     return function(ev) {
         let key = get_repeating_key(ev);
         let tAttr =`repeating_reputation-track_${key}_char-${tname}`;
         getAttrs([tAttr], function(val) {
             let attr = {};
-            let nval = parseInt(val[tAttr]) + 1
+            let nval = parseInt(val[tAttr]) + delta;
+            nval = nval < 0 ? 0 : nval;
             attr[tAttr] = nval <= tlength ? nval : tlength;
             setAttrs(attr);
         });
     }
 }
-on("clicked:repeating_reputation-track:incr-notoriety", rep_track_incr('notoriety'));
-on("clicked:repeating_reputation-track:incr-prestige", rep_track_incr('prestige'));
+on("clicked:repeating_reputation-track:incr-notoriety", rep_track_incr('notoriety', 1));
+on("clicked:repeating_reputation-track:incr-prestige", rep_track_incr('prestige', 1));
+
+on("clicked:repeating_reputation-track:decr-notoriety", rep_track_incr('notoriety', -1));
+on("clicked:repeating_reputation-track:decr-prestige", rep_track_incr('prestige', -1));
 
 function rep_update(tname) {
     let tlength = (tname == "notoriety") ? 9 : 15;

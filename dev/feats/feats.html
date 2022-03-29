@@ -1,0 +1,19 @@
+<div class="feats-container">    
+    <button class="add-feat" type="action" name="act_add-feat">Add</button>
+    <h3>Feats</h3>
+    <fieldset class="repeating_feats">
+        <div class="feat-item">
+            <div>
+                <input type="hidden" name="attr_feat-title" />
+                <input type="checkbox" class="display-flag" name="attr_display-flag" />
+                <div class="feat-title">
+                    <span class="feat-title" name="attr_feat-title"></span>
+                    <button type="roll" name="roll_output" class="pictos feat-to-chat" value="&{template:thought} {{name=@{feat-title}}} {{tag=Rougish feat}} {{rule=@{feat-rule}}}">w</button>
+                </div>
+            </div>
+            <input type="hidden" name="attr_feat-rule" />
+            <input type="hidden" class="feat-rule-display" name="attr_feat-rule-display" value="0" />
+            <span class="feat-rule" name="attr_feat-rule"></span>
+        </div>
+    </fieldset>
+</div>

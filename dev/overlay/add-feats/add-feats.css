@@ -1,6 +1,6 @@
-/* nature list */
-div.overlay-add-nature-content { }
-div.overlay-add-nature-list div.repcontainer {
+/* feats list */
+div.overlay-add-feat-content { }
+div.overlay-add-feat-list div.repcontainer {
     box-sizing: border-box;
     padding: 5px;
     display: grid;
@@ -8,7 +8,7 @@ div.overlay-add-nature-list div.repcontainer {
     grid-auto-rows: .1fr;
     gap: 5px;
 }
-div.nature-list-item {
+div.feats-list-item {
     height: 100%;
     border: 2px dashed #99925D;
     background-color: #FCFAF5;
@@ -16,34 +16,35 @@ div.nature-list-item {
     box-sizing: border-box;
     margin-bottom: 5px;
 }
-input.nature-is-starting[value="1"] + div.nature-list-item {
+input.feat-is-starting[value="1"] + div.feats-list-item {
     border: 2px solid red;
 }
-div.nature-list-item div.action-button {
+div.feats-list-item div.action-button {
     text-align: right;
     margin: 0;
     padding: 0;
     height: 0;
     display: none;
 }
-div.nature-list-item:hover div.action-button {
+div.feats-list-item:hover div.action-button {
     display: block;
 }
-div.nature-list-item div.action-button button {
+div.feats-list-item div.action-button button {
     font-size: .8em;
     margin: 0;
     padding: 2px;
     line-height: .8em;
 }
-div.nature-list-item span.nature-name {
+div.feats-list-item span.feat-name {
     font-family: 'Gabriela';
     font-weight: bold;
     border: none;
     display: block;
 }
-div.nature-list-item span.nature-rule {
+div.feats-list-item span.feat-rule {
     font-size: .9em;
 }
+
 /* Hide fieldset buttons */
-[data-groupname=repeating_add-nature] > button.btn.repcontrol_add { display: none; }
-[data-groupname=repeating_add-nature] > button.btn.repcontrol_edit { display: none; }
+[data-groupname=repeating_add-feats] > button.btn.repcontrol_add { display: none; }
+[data-groupname=repeating_add-feats] > button.btn.repcontrol_edit { display: none; }

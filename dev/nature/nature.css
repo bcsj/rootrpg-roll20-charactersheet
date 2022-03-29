@@ -87,3 +87,7 @@ div.nature-container button.add-nature::after {
 [data-groupname=repeating_natures] > button.btn.repcontrol_edit::after { 
     content: " y"; /* "gear" symbol in Pictos font */
 }
+
+div.repcontrol[data-groupname=repeating_natures] {
+    height: 3px;
+}

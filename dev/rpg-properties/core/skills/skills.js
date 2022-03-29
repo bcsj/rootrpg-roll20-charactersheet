@@ -10,7 +10,7 @@ let skills = {
     ]
   },
   "Charge": {
-    "text": "When you **charge at an opponent at far range**, mark exhaustion and roll with Might. On a hit, they must choose to either mark 2-exhaustion or allow you to push them\u00e2\u20ac\u201dyou say where they are driven, and you say what range you now stand at. On a 10+, inflict morale harm on them as well.\n",
+    "text": "When you **charge at an opponent at far range**, mark exhaustion and roll with Might. On a hit, they must choose to either mark 2-exhaustion or allow you to push them - you say where they are driven, and you say what range you now stand at. On a 10+, inflict morale harm on them as well.\n",
     "allowItem": [
       "weapon"
     ],
@@ -34,7 +34,7 @@ let skills = {
     "mastery": "On a 12+, choose one:\n\n* you successfully confuse the senses of a whole group; apply the results of the 10+ move to any foes you choose in range\n* you knock a single foe so off-kilter you can take them out exactly as you choose right now, without triggering any move\n"
   },
   "Disarm": {
-    "text": "When you target an opponent's weapon with your strikes at close range, roll with Finesse. On a hit, they have to mark 2-exhaustion or lose their weapon\u00e2\u20ac\u201dit's well out of reach. On a 10+, they have to mark 3-exhaustion instead of 2.",
+    "text": "When you target an opponent's weapon with your strikes at close range, roll with Finesse. On a hit, they have to mark 2-exhaustion or lose their weapon - it's well out of reach. On a 10+, they have to mark 3-exhaustion instead of 2.",
     "mastery": "On a 12+, your opponent both marks 3-exhaustion and loses their weapon.",
     "allowItem": [
       "Weapon",
@@ -85,7 +85,7 @@ let skills = {
     ]
   },
   "Lunge": {
-    "text": "When you **make an outright lunge at a foe within close range**, choose an amount of injury between 1-injury and 3-injury and roll with Finesse. On a hit, you inflict that amount of injury\u00e2\u20ac\u201dignoring armor\u00e2\u20ac\u201dbut if your target survives (or if other foes are present) they can take advantage of your over-extension to inflict the same amount on you. On a 7-9, they can inflict 1-injury more upon you than you had originally chosen to inflict upon them.\n",
+    "text": "When you **make an outright lunge at a foe within close range**, choose an amount of injury between 1-injury and 3-injury and roll with Finesse. On a hit, you inflict that amount of injury - ignoring armor - but if your target survives (or if other foes are present) they can take advantage of your over-extension to inflict the same amount on you. On a 7-9, they can inflict 1-injury more upon you than you had originally chosen to inflict upon them.\n",
     "allowItem": [
       "Weapon"
     ],
@@ -134,7 +134,7 @@ let skills = {
     ]
   },
   "Quick Shot": {
-    "text": "When you **fire a snap shot at an enemy at close range**, roll with Luck. On a hit, inflict injury. On a 7-9, choose 1. On a 10+, choose 2.\n\n* you don't mark wear\n* you don't mark exhaustion\n* you move quickly and change your position (and, if you choose, range)\n* you keep your target at bay\u00e2\u20ac\u201dthey don't move\n",
+    "text": "When you **fire a snap shot at an enemy at close range**, roll with Luck. On a hit, inflict injury. On a 7-9, choose 1. On a 10+, choose 2.\n\n* you don't mark wear\n* you don't mark exhaustion\n* you move quickly and change your position (and, if you choose, range)\n* you keep your target at bay - they don't move\n",
     "mastery": "On a 12+, take all four options from the list and inflict 2-injury instead of 1-injury.",
     "allowItem": [
       "Bow"
@@ -179,7 +179,7 @@ let skills = {
   },
   "Vicious Strike": {
     "text": "When you **viciously strike an opponent where they are weak at intimate or close range**, mark exhaustion and roll with Might. On a hit, they suffer serious (+1) harm and cannot mark wear on their armor to block it. On a 10+, you get away with the strike. On a 7-9, they score a blow against you as well.\n",
-    "mastery": "On a 12+, in addition to the results of the 10+, you strike them so well you incapacitate them, choosing one from the list:\n\n* they cannot change position\u00e2\u20ac\u201dfleeing, advancing, maneuvering, etc.\u00e2\u20ac\u201d until they receive medical aid\n* they cannot wield a weapon until they receive medical aid\n* they cannot communicate until they receive medical aid\n",
+    "mastery": "On a 12+, in addition to the results of the 10+, you strike them so well you incapacitate them, choosing one from the list:\n\n* they cannot change position - fleeing, advancing, maneuvering, etc. -  until they receive medical aid\n* they cannot wield a weapon until they receive medical aid\n* they cannot communicate until they receive medical aid\n",
     "allowItem": [
       "Weapon",
       "Bow"

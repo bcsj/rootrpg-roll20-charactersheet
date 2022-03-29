@@ -30,6 +30,10 @@ on("clicked:add-drive", function() {
                         attrs["repeating_add-drives_" + id + "_add-drive-key"] = key;
                         attrs["repeating_add-drives_" + id + "_add-drive-title"] = key;
                         attrs["repeating_add-drives_" + id + "_add-drive-rule"] = drives[key]['text'];
+                        if (drives[key].hasOwnProperty('namedTarget')) {
+                            attrs["repeating_add-drives_" + id + "_add-drive-has-named-target"] = "1";
+                        }
+                        
                     }
                 });
                     
@@ -40,6 +44,12 @@ on("clicked:add-drive", function() {
                         attrs["repeating_add-drives_" + id + "_add-drive-key"] = key;
                         attrs["repeating_add-drives_" + id + "_add-drive-title"] = key;
                         attrs["repeating_add-drives_" + id + "_add-drive-rule"] = drives[key]['text'];
+                        if (drives[key].hasOwnProperty('namedTarget')) {
+                            attrs["repeating_add-drives_" + id + "_add-drive-has-named-target"] = "1";
+                        } else {
+                            attrs["repeating_add-drives_" + id + "_add-drive-has-named-target"] = "0";
+                        }
+                        attrs["repeating_add-drives_" + id + "_add-drive-named-target"] = "";
                     }
                 });
                 setAttrs(attrs);
@@ -49,13 +59,21 @@ on("clicked:add-drive", function() {
 });
 on("clicked:repeating_add-drives:add-the-drive", function(ev) {
 	let key = get_repeating_key(ev);
-	let kAttr = `repeating_add-drives_${key}_add-drive-key`;
-	getAttrs([kAttr], function(val) {
-		let dkey = val[kAttr];
+	let kAttrs = [
+        `repeating_add-drives_${key}_add-drive-key`,
+        `repeating_add-drives_${key}_add-drive-named-target`,
+    ];
+	getAttrs(kAttrs, function(val) {
+		let dkey = val[kAttrs[0]];
 		let attrs = {};
 		let id = generateRowID();
 		attrs["repeating_drives_" + id + "_drive-title"] = dkey;
-		attrs["repeating_drives_" + id + "_drive-rule"] = drives[dkey]['text'];
+		if (drives[dkey].hasOwnProperty('namedTarget')) {
+            let namedTarget = val[kAttrs[1]];
+            attrs["repeating_drives_" + id + "_drive-rule"] = "**Target: " + namedTarget + ".** " + drives[dkey]['text'];
+        } else {
+            attrs["repeating_drives_" + id + "_drive-rule"] = drives[dkey]['text'];
+        }
 		setAttrs(attrs);
 		clear_overlay();
 	});

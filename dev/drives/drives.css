@@ -87,3 +87,7 @@ div.drives-container button.add-drive::after {
 [data-groupname=repeating_drives] > button.btn.repcontrol_edit::after { 
     content: " y"; /* "gear" symbol in Pictos font */
 }
+
+div.repcontrol[data-groupname=repeating_drives] {
+    height: 3px;
+}
