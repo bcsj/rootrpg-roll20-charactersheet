@@ -14,7 +14,6 @@ function rep_track_incr(tname, delta) {
 }
 on("clicked:repeating_reputation-track:incr-notoriety", rep_track_incr('notoriety', 1));
 on("clicked:repeating_reputation-track:incr-prestige", rep_track_incr('prestige', 1));
-
 on("clicked:repeating_reputation-track:decr-notoriety", rep_track_incr('notoriety', -1));
 on("clicked:repeating_reputation-track:decr-prestige", rep_track_incr('prestige', -1));
 

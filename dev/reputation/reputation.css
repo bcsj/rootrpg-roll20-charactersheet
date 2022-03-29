@@ -65,18 +65,42 @@ div.reputation-track-checkboxes {
 }
 
 div.reputation-track button.incr-notoriety,
-div.reputation-track button.incr-prestige {
+div.reputation-track button.incr-prestige,
+div.reputation-track button.decr-notoriety,
+div.reputation-track button.decr-prestige {
     height: 15px; 
-    width: 10px; 
+    width: 12px; 
     padding: 0px; 
     font-size: 10px; 
     line-height: 10px;
 }
-div.reputation-track button.incr-notoriety {
+div.reputation-track button.incr-notoriety,
+div.reputation-track button.decr-notoriety {
     background-color: #6C0D0E;
 }
-div.reputation-track button.incr-prestige {
+div.reputation-track button.incr-prestige,
+div.reputation-track button.decr-prestige {
     background-color: #005629;
+}
+div.reputation-track button.decr-prestige {
+    margin-right: -2px;
+    -moz-border-radius: 5px 0px 0px 5px; 
+    border-radius: 5px 0px 0px 5px;
+}
+div.reputation-track button.incr-prestige {
+    margin-left: -2px;
+    -moz-border-radius: 0px 5px 5px 0px; 
+    border-radius: 0px 5px 5px 0px;
+}
+div.reputation-track button.incr-notoriety {
+    margin-right: -2px;
+    -moz-border-radius: 5px 0px 0px 5px; 
+    border-radius: 5px 0px 0px 5px;
+}
+div.reputation-track button.decr-notoriety {
+    margin-left: -2px;
+    -moz-border-radius: 0px 5px 5px 0px; 
+    border-radius: 0px 5px 5px 0px;
 }
 
 span.reputation-n3, span.reputation-n2, span.reputation-n1, span.reputation-0, span.reputation-1, span.reputation-2, span.reputation-3 {
