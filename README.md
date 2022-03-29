@@ -9,6 +9,11 @@ The parts may refer to any submodule in their folder using the custom command
 ```
 which the build script identifies and handles.
 
+To build run 
+```
+python build.py
+```
+
 ## tmp & prod directories
 * `tmp` is the directory `build.py` uses to work through and post process the files in.  
 * `prod` is where the generated sheet files go once done.
