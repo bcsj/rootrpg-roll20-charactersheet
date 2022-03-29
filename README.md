@@ -24,3 +24,6 @@ which the build script identifies and handles.
 * NPC character sheet for the DM to use
 * Probably a lot more ...
 
+# Credits
+* Leder Games (Root)
+* Magpie Games (Root RPG)
